@@ -15,7 +15,7 @@ export class InputBox extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://dc1prdbkit.es.ad.adp.com:8080/dbmetrics/toolkitpull.php?metric=farminfo&farm=dc1prtkf4")
+        fetch("https://api.themoviedb.org/3/discover/movie?api_key=f3e9f7d1677c7aa63c9ab526381eeceb")
             .then(res => res.json())
             .then(
                 (result) => {

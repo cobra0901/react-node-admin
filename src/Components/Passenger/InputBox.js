@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import './index.css'
+import '../../css/main.css'
 
 export class InputBox extends React.Component {
     render() {
@@ -35,12 +36,8 @@ export class InputBox extends React.Component {
                         <label>Valid To</label><input/><br/>
                         <label>Balance</label><input/><br/>
                         <label>Status</label><input/><br/>
-                        <center>
-                            <Button >Deactive</Button>
-                        </center>
-                        <center>
-                            <Button >Save</Button>
-                        </center>
+                        <Button className="mt-10">Deactive</Button>
+                        <Button className="mt-10">Save</Button>
                     </Col>
                 </Row>
             </div>

@@ -24,6 +24,18 @@ body {
   margin: 0 auto;
 }
 
+.table-view{
+  margin-top: 30px;
+}
+
+.th-view{
+  background-color: cornflowerblue;
+}
+
+.th-button-view{
+  width: 30px;
+}
+
 @media(min-width: 1060px) {
   .container {
     width: 960px;

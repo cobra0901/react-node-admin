@@ -1,6 +1,9 @@
 import React from 'react';
 import {Row,Tab,Nav,NavItem,Col} from 'react-bootstrap';
 import {Mycards} from "./tabs/Mycards";
+import {RideDetails} from "./tabs/RideDetails";
+import {TopupHistory} from "./tabs/TopupHistory";
+import {Report} from "./tabs/Report";
 export class ContentTab extends React.Component {
 
     render(){
@@ -22,16 +25,16 @@ export class ContentTab extends React.Component {
                                 <Mycards/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="update_info">
-                                Tab 2 content
+                                Please update info
                             </Tab.Pane>
                             <Tab.Pane eventKey="ride_details">
-                                Tab 3 content
+                                <RideDetails/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="top_up_details">
-                                Tab 4 content
+                                <TopupHistory/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="report">
-                                Tab 5 content
+                                <Report/>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>

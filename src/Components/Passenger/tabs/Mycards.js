@@ -47,17 +47,6 @@ export class Mycards extends React.Component {
                     <td><Button bsStyle="success" onClick={() => this.setState({ show: true })}>edit</Button></td>
                     <td><Button bsStyle="danger">delete</Button></td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Anna</td>
-                    <td>Pitt</td>
-                    <td>35</td>
-                    <td>New York</td>
-                    <td>USA</td>
-                    <td>1235</td>
-                    <td><Button bsStyle="success">edit</Button></td>
-                    <td><Button bsStyle="danger">delete</Button></td>
-                </tr>
                 </tbody>
             </Table>
                 <Modal

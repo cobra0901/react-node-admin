@@ -1,6 +1,6 @@
 import React from 'react';
 import {Table,Button,Modal} from 'react-bootstrap';
-import '../../../css/index.css'
+import '../../../css/index.css';
 
 export class Mycards extends React.Component {
 
@@ -10,7 +10,7 @@ export class Mycards extends React.Component {
         this.handleHide = this.handleHide.bind(this);
 
         this.state = {
-            show: false
+            show: false,
         };
     }
 
@@ -21,7 +21,7 @@ export class Mycards extends React.Component {
     render() {
         return(
             <div>
-            <Table responsive className="table-view" bordered hover>
+                <Table responsive className="table-view" bordered hover>
                 <thead>
                 <tr className="th-view">
                     <th>UserID</th>
@@ -36,17 +36,22 @@ export class Mycards extends React.Component {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Anna</td>
-                    <td>Pitt</td>
-                    <td>35</td>
-                    <td>New York</td>
-                    <td>USA</td>
-                    <td>1235</td>
-                    <td><Button bsStyle="success" onClick={() => this.setState({ show: true })}>edit</Button></td>
-                    <td><Button bsStyle="danger">delete</Button></td>
-                </tr>
+
+                {this.props.cards.map((element, index) => {
+                    return(
+                            <tr key={index}>
+                                <td>{this.props.cards[index].UserID}</td>
+                                <td>{this.props.cards[index].Owner}</td>
+                                <td>{this.props.cards[index].Isblock}</td>
+                                <td>{this.props.cards[index].ValidFrom}</td>
+                                <td>{this.props.cards[index].ValidTo}</td>
+                                <td>{this.props.cards[index].Balance}</td>
+                                <td>{this.props.cards[index].CardNumber}</td>
+                                <td><Button bsStyle="success" onClick={() => this.setState({ show: true })}>edit</Button></td>
+                                <td><Button bsStyle="danger">delete</Button></td>
+                            </tr>
+                        )})}
+
                 </tbody>
             </Table>
                 <Modal

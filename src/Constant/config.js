@@ -1,0 +1,1 @@
+//export let CARD_NUMBER = '0000';

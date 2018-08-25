@@ -3,6 +3,7 @@ import {Row, Col, Button} from 'react-bootstrap';
 import './index.css'
 import '../../css/main.css'
 import {FormResults} from "./tabs/FormResults";
+import {ContentTab} from "./ContentTab";
 
 export class InputBox extends React.Component {
 
@@ -12,8 +13,8 @@ export class InputBox extends React.Component {
             error: null,
             isLoaded: false,
             results: [],
+            cards:[],
             cardNumber:''
-
         };
     }
 
@@ -25,7 +26,12 @@ export class InputBox extends React.Component {
 
     handleClick(){
         let val = this.state.cardNumber;
-        console.log(val,"val");
+
+        if(this.state.cardNumber === ''){
+            alert("please insert your cardnumber");
+            return;
+        }
+
         fetch(`http://54.251.190.7:1995/users/${val}`)
             .then(response => {
                 if (response.status !== 200) {
@@ -36,7 +42,24 @@ export class InputBox extends React.Component {
                 response.json().then(data => {
                     const results = data;
                     this.setState({ results });
-                    console.log(results,"results");
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/card/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const cards = data;
+                    this.setState({ cards });
+                    console.log(cards,"cards");
                 });
             })
 
@@ -55,11 +78,13 @@ export class InputBox extends React.Component {
 
                         <Col xs={12} md={12}>
                             <label className="mb-30">Enter Card Number</label>
-                            <input type="text" name="cardNumber" value = {this.state.cardNumber} onChange={this.onhandleChange.bind(this)} />
+                            <input type="text" name="cardNumber" value = {this.state.cardNumber} onChange={this.onhandleChange.bind(this)} required/>
                             <Button onClick={this.handleClick.bind(this)}>Insert</Button>
                         </Col>
 
-                        <FormResults results={this.state.results} />
+                        <FormResults results={this.state.results}/>
+
+                        <ContentTab cards={this.state.cards}/>
 
                     </Row>
                 </div>

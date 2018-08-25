@@ -1,5 +1,6 @@
 import React from 'react';
 import {Col,Button} from 'react-bootstrap';
+import '../../../css/main.css'
 
 export class FormResults extends React.Component {
 
@@ -8,9 +9,10 @@ export class FormResults extends React.Component {
                 <ul>
                     {this.props.results.map((element, index) => {
                         return(
+
                             <li key={index}>
                                 <Col xs={12} md={4}>
-                                    <label>First Name</label><input type="text" value={this.props.results[index].FirstName} disabled/><br/>
+                                    <label>First Name</label><input type="text" value={this.props.results[0].FirstName} disabled/><br/>
                                     <label>Last Name</label><input type="text" value={this.props.results[index].LastName} disabled/><br/>
                                     <label>Email</label><input type="text" value={this.props.results[index].Email} disabled/><br/>
                                     <label>Mobile</label><input type="text" value={this.props.results[index].Mobile} disabled/><br/>

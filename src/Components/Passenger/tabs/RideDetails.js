@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table,Button,Modal} from 'react-bootstrap';
+import {Table,Button} from 'react-bootstrap';
 
 import '../../../css/index.css'
 

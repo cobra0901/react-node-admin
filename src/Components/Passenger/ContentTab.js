@@ -12,17 +12,13 @@ export class ContentTab extends React.Component {
         super();
     }
 
-    handleClick(){
-        console.log(this.props.cards,"cards");
-    }
-
     render(){
         return(
               <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
                 <Row className="clearfix">
                     <Col sm={12}>
                         <Nav bsStyle="tabs">
-                            <NavItem eventKey="my_cards" onClick ={this.handleClick.bind(this)}>MY CARDS</NavItem>
+                            <NavItem eventKey="my_cards">MY CARDS</NavItem>
                             <NavItem eventKey="update_info">UPDATE INFO</NavItem>
                             <NavItem eventKey="ride_details">RIDE DETAILS</NavItem>
                             <NavItem eventKey="top_up_details">TOP UP DETAILS</NavItem>
@@ -40,13 +36,13 @@ export class ContentTab extends React.Component {
                                 Please update info
                             </Tab.Pane>
                             <Tab.Pane eventKey="ride_details">
-                                <RideDetails/>
+                                <RideDetails ridehistories={this.props.ridehistories}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="top_up_details">
-                                <TopupHistory/>
+                                <TopupHistory topuphistories={this.props.topuphistories}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="report">
-                                <Report/>
+                                <Report reportblocks={this.props.reportblocks}/>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>

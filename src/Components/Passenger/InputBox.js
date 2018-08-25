@@ -14,6 +14,9 @@ export class InputBox extends React.Component {
             isLoaded: false,
             results: [],
             cards:[],
+            ridehistories:[],
+            topuphistories:[],
+            reportblocks:[],
             cardNumber:''
         };
     }
@@ -67,6 +70,59 @@ export class InputBox extends React.Component {
                 console.log('Fetch Error :-S', err);
             });
 
+        fetch(`http://54.251.190.7:1995/ridehistory/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const ridehistories = data;
+                    this.setState({ ridehistories });
+                    console.log(ridehistories,"ridehistories");
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/topuphistory/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const topuphistories = data;
+                    this.setState({ topuphistories });
+                    console.log(topuphistories,"topuphistories");
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/reportblock/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const reportblocks = data;
+                    this.setState({ reportblocks });
+                    console.log(reportblocks,"reportblocks");
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
     }
 
     render() {
@@ -84,7 +140,12 @@ export class InputBox extends React.Component {
 
                         <FormResults results={this.state.results}/>
 
-                        <ContentTab cards={this.state.cards}/>
+                        <ContentTab
+                            cards={this.state.cards}
+                            ridehistories={this.state.ridehistories}
+                            topuphistories={this.state.topuphistories}
+                            reportblocks={this.state.reportblocks}
+                        />
 
                     </Row>
                 </div>

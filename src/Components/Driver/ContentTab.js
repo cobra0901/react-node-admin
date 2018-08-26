@@ -10,15 +10,19 @@ export class ContentTab extends React.Component {
 
     render(){
         return(
-              <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
+            <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
                 <Row className="clearfix">
                     <Col sm={12}>
                         <Nav bsStyle="tabs">
-                            <NavItem eventKey="my_cards">MY CARDS</NavItem>
+                            <NavItem eventKey="my_account">MY ACCOUNT</NavItem>
                             <NavItem eventKey="update_info">UPDATE INFO</NavItem>
                             <NavItem eventKey="ride_details">RIDE DETAILS</NavItem>
                             <NavItem eventKey="top_up_details">TOP UP DETAILS</NavItem>
-                            <NavItem eventKey="report">REPORT</NavItem>
+                            <NavItem eventKey="ad_history">AD HISTORY</NavItem>
+                            <NavItem eventKey="transaction">TRANSACTION</NavItem>
+                            <NavItem eventKey="service">SERVICE</NavItem>
+                            <NavItem eventKey="change_route">CHANGE ROUTE</NavItem>
+                            <NavItem eventKey="report">CHANGE DEVICE</NavItem>
                         </Nav>
                     </Col>
 

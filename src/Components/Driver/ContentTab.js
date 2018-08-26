@@ -1,10 +1,15 @@
 import React from 'react';
 import {Row,Tab,Nav,NavItem,Col} from 'react-bootstrap';
-import {Mycards} from "./tabs/Mycards";
+
+import '../../css/main.css'
+import {MyAccount} from "./tabs/MyAccount";
+import {History} from "./tabs/History";
+import {Transaction} from "./tabs/Transaction";
+import {Service} from "./tabs/Service";
+import {ChangeRoute} from "./tabs/ChangeRoute";
+import {ChangeDevice} from "./tabs/ChangeDevice";
 import {RideDetails} from "./tabs/RideDetails";
 import {TopupHistory} from "./tabs/TopupHistory";
-import {Report} from "./tabs/Report";
-import '../../css/main.css'
 
 export class ContentTab extends React.Component {
 
@@ -22,27 +27,39 @@ export class ContentTab extends React.Component {
                             <NavItem eventKey="transaction">TRANSACTION</NavItem>
                             <NavItem eventKey="service">SERVICE</NavItem>
                             <NavItem eventKey="change_route">CHANGE ROUTE</NavItem>
-                            <NavItem eventKey="report">CHANGE DEVICE</NavItem>
+                            <NavItem eventKey="change_device">CHANGE DEVICE</NavItem>
                         </Nav>
                     </Col>
 
 
                     <Col sm={12}>
                         <Tab.Content animation>
-                            <Tab.Pane eventKey="my_cards">
-                                <Mycards cards={this.props.cards} />
+                            <Tab.Pane eventKey="my_account">
+                                <MyAccount cards={this.props.cards} />
                             </Tab.Pane>
                             <Tab.Pane eventKey="update_info">
                                 Please update info
                             </Tab.Pane>
                             <Tab.Pane eventKey="ride_details">
-                                <RideDetails ridehistories={this.props.ridehistories}/>
+                                <RideDetails rideDetails={this.props.rideDetails}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="top_up_details">
                                 <TopupHistory topuphistories={this.props.topuphistories}/>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="report">
-                                <Report reportblocks={this.props.reportblocks}/>
+                            <Tab.Pane eventKey="ad_history">
+                                <History histories={this.props.histories}/>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="transaction">
+                                <Transaction transactions={this.props.transactions}/>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="service">
+                                <Service services={this.props.services}/>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="change_route">
+                                <ChangeRoute changeRoutes={this.props.changeRoutes}/>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="change_device">
+                                <ChangeDevice changeDevices={this.props.changeDevices}/>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>

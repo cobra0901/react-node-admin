@@ -3,7 +3,7 @@ import {Row, Col, Button} from 'react-bootstrap';
 import './index.css'
 import '../../css/main.css'
 import {FormResults} from "./tabs/FormResults";
-//import {ContentTab} from "./ContentTab";
+import {ContentTab} from "./ContentTab";
 
 export class DriverBox extends React.Component {
 
@@ -13,6 +13,14 @@ export class DriverBox extends React.Component {
             error: null,
             isLoaded: false,
             results: [],
+            accounts:[],
+            rideDetails:[],
+            topupDetails:[],
+            histories:[],
+            transactions:[],
+            services:[],
+            changeRoutes:[],
+            changeDevices:[],
             busid:''
         };
     }

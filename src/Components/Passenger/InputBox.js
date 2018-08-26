@@ -62,7 +62,6 @@ export class InputBox extends React.Component {
                 response.json().then(data => {
                     const cards = data;
                     this.setState({ cards });
-                    console.log(cards,"cards");
                 });
             })
 
@@ -80,7 +79,6 @@ export class InputBox extends React.Component {
                 response.json().then(data => {
                     const ridehistories = data;
                     this.setState({ ridehistories });
-                    console.log(ridehistories,"ridehistories");
                 });
             })
 
@@ -98,7 +96,6 @@ export class InputBox extends React.Component {
                 response.json().then(data => {
                     const topuphistories = data;
                     this.setState({ topuphistories });
-                    console.log(topuphistories,"topuphistories");
                 });
             })
 
@@ -116,7 +113,6 @@ export class InputBox extends React.Component {
                 response.json().then(data => {
                     const reportblocks = data;
                     this.setState({ reportblocks });
-                    console.log(reportblocks,"reportblocks");
                 });
             })
 

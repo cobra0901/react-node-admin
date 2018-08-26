@@ -20,7 +20,6 @@ export class ChangeRoute extends React.Component {
     }
 
     render() {
-        console.log(this.props.rideDetails,"Results");
         return (
             <div>
                 <Table responsive className="table-view" bordered hover>

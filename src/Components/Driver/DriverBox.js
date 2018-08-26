@@ -89,6 +89,57 @@ export class DriverBox extends React.Component {
                 console.log('Fetch Error :-S', err);
             });
 
+        fetch(`http://54.251.190.7:1995/reportservice`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const services = data;
+                    this.setState({ services });
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/reportchangeroute`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const changeRoutes = data;
+                    this.setState({ changeRoutes });
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/reportchangedevice`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const changeDevices = data;
+                    this.setState({ changeDevices });
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
     }
 
     render() {

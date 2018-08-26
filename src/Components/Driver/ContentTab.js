@@ -44,7 +44,7 @@ export class ContentTab extends React.Component {
                                 <RideDetails rideDetails={this.props.rideDetails}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="top_up_details">
-                                <TopupHistory topuphistories={this.props.topuphistories}/>
+                                <TopupHistory topupDetails={this.props.topupDetails}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="ad_history">
                                 <History histories={this.props.histories}/>

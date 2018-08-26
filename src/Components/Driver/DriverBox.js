@@ -13,7 +13,6 @@ export class DriverBox extends React.Component {
             error: null,
             isLoaded: false,
             results: [],
-            accounts:[],
             rideDetails:[],
             topupDetails:[],
             histories:[],
@@ -49,9 +48,40 @@ export class DriverBox extends React.Component {
                 response.json().then(data => {
                     const results = data;
                     this.setState({ results });
-                    console.log('results', results);
-                    console.log('results###', this.state.results);
+                });
+            })
 
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/ridehistoryD/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const rideDetails = data;
+                    this.setState({ rideDetails });
+                });
+            })
+
+            .catch(err => {
+                console.log('Fetch Error :-S', err);
+            });
+
+        fetch(`http://54.251.190.7:1995/topuphistory/BusID/${val}`)
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log('Error: ' + response.status);
+                    return;
+                }
+
+                response.json().then(data => {
+                    const topupDetails = data;
+                    this.setState({ topupDetails });
                 });
             })
 
@@ -77,7 +107,6 @@ export class DriverBox extends React.Component {
                     <FormResults results={this.state.results}/>
 
                     <ContentTab
-                        accounts={this.state.accounts}
                         rideDetails={this.state.rideDetails}
                         topupDetails={this.state.topupDetails}
                         histories={this.state.histories}

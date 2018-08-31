@@ -1,1 +1,1 @@
-//export let CARD_NUMBER = '0000';
+export const SERVER_URL = 'http://ec2-54-169-53-70.ap-southeast-1.compute.amazonaws.com:5000/';

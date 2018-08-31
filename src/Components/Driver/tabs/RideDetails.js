@@ -19,6 +19,12 @@ export class RideDetails extends React.Component {
         this.setState({ show: false });
     }
 
+    handleChange(e){
+        var nextState = {};
+        nextState[e.target.name] = e.target.value;
+        this.setState(nextState);
+    }
+
     render() {
         return (
             <div>
@@ -57,7 +63,21 @@ export class RideDetails extends React.Component {
                                 <td>{this.props.rideDetails[index].Entry_CardReaderID}</td>
                                 <td>{this.props.rideDetails[index].Exit_CardReaderID}</td>
                                 <td>{this.props.rideDetails[index].Fare_Type}</td>
-                                <td><Button bsStyle="success" onClick={() => this.setState({ show: true })}>edit</Button></td>
+                                <td><Button bsStyle="success" onClick={() => this.setState({
+                                    show: true,
+                                    CardID:this.props.rideDetails[index].CardID,
+                                    BusRoute:this.props.rideDetails[index].BusRoute,
+                                    BusID:this.props.rideDetails[index].BusID,
+                                    Entry:this.props.rideDetails[index].Entry,
+                                    Exit:this.props.rideDetails[index].Exit,
+                                    FareCharged:this.props.rideDetails[index].FareCharged,
+                                    Travel_Date:this.props.rideDetails[index].Travel_Date,
+                                    Entry_Time:this.props.rideDetails[index].Entry_Time,
+                                    Exit_Time:this.props.rideDetails[index].Exit_Time,
+                                    Entry_CardReaderID:this.props.rideDetails[index].Entry_CardReaderID,
+                                    Exit_CardReaderID:this.props.rideDetails[index].Exit_CardReaderID,
+                                    Fare_Type:this.props.rideDetails[index].Fare_Type,
+                                })}>edit</Button></td>
                                 <td><Button bsStyle="danger">delete</Button></td>
                             </tr>
                         )})}
@@ -75,7 +95,42 @@ export class RideDetails extends React.Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        This is editable Data.
+                        <label>CardID</label>
+                        <input type="text" name="CardID"
+                               value={this.state.CardID} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>BusRoute</label>
+                        <input type="text" name="BusRoute"
+                               value={this.state.BusRoute} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>BusID</label>
+                        <input type="text" name="BusID"
+                               value={this.state.BusID} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Entry</label>
+                        <input type="text" name="Entry"
+                               value={this.state.Entry} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Exit</label>
+                        <input type="text" name="Exit"
+                               value={this.state.Exit} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>FareCharged</label>
+                        <input type="text" name="FareCharged"
+                               value={this.state.FareCharged} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Travel_Date</label>
+                        <input type="text" name="Travel_Date"
+                               value={this.state.Travel_Date} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Entry_Time</label>
+                        <input type="text" name="Entry_Time"
+                               value={this.state.Entry_Time} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Exit_Time</label>
+                        <input type="text" name="Exit_Time"
+                               value={this.state.Exit_Time} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Entry_CardReaderID</label>
+                        <input type="text" name="Entry_CardReaderID"
+                               value={this.state.Entry_CardReaderID} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Exit_CardReaderID</label>
+                        <input type="text" name="Exit_CardReaderID"
+                               value={this.state.Exit_CardReaderID} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>Fare_Type</label>
+                        <input type="text" name="Fare_Type"
+                               value={this.state.Fare_Type} onChange={this.handleChange.bind(this)} /><br/>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button bsStyle="primary">Save</Button>

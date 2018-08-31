@@ -3,7 +3,6 @@ import {Row,Tab,Nav,NavItem,Col} from 'react-bootstrap';
 
 import '../../css/main.css'
 import {MyAccount} from "./tabs/MyAccount";
-import {History} from "./tabs/History";
 import {Transaction} from "./tabs/Transaction";
 import {Service} from "./tabs/Service";
 import {ChangeRoute} from "./tabs/ChangeRoute";
@@ -23,7 +22,6 @@ export class ContentTab extends React.Component {
                             <NavItem eventKey="update_info">UPDATE INFO</NavItem>
                             <NavItem eventKey="ride_details">RIDE DETAILS</NavItem>
                             <NavItem eventKey="top_up_details">TOP UP DETAILS</NavItem>
-                            <NavItem eventKey="ad_history">AD HISTORY</NavItem>
                             <NavItem eventKey="transaction">TRANSACTION</NavItem>
                             <NavItem eventKey="service">SERVICE</NavItem>
                             <NavItem eventKey="change_route">CHANGE ROUTE</NavItem>
@@ -46,9 +44,7 @@ export class ContentTab extends React.Component {
                             <Tab.Pane eventKey="top_up_details">
                                 <TopupHistory topupDetails={this.props.topupDetails}/>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="ad_history">
-                                <History histories={this.props.histories}/>
-                            </Tab.Pane>
+
                             <Tab.Pane eventKey="transaction">
                                 <Transaction transactions={this.props.transactions}/>
                             </Tab.Pane>

@@ -4,6 +4,8 @@ import './index.css'
 import '../../css/main.css'
 import {FormResults} from "./tabs/FormResults";
 import {ContentTab} from "./ContentTab";
+import {SERVER_URL} from "../../Constant/config";
+import axios from 'axios';
 
 export class DriverBox extends React.Component {
 
@@ -38,108 +40,41 @@ export class DriverBox extends React.Component {
             return;
         }
 
-        fetch(`http://54.251.190.7:1995/driver/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const results = data;
-                    this.setState({ results });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `driver/${val}`)
+            .then(res => {
+                const results = res.data;
+                this.setState({ results });
             });
 
-        fetch(`http://54.251.190.7:1995/ridehistoryD/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const rideDetails = data;
-                    this.setState({ rideDetails });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `ridehistoryD/${val}`)
+            .then(res => {
+                const rideDetails = res.data;
+                this.setState({ rideDetails });
             });
 
-        fetch(`http://54.251.190.7:1995/topuphistory/BusID/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const topupDetails = data;
-                    this.setState({ topupDetails });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `topuphistory/BusID/${val}`)
+            .then(res => {
+                const topupDetails = res.data;
+                this.setState({ topupDetails });
             });
 
-        fetch(`http://54.251.190.7:1995/reportservice`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const services = data;
-                    this.setState({ services });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `reportservice`)
+            .then(res => {
+                const services = res.data;
+                this.setState({ services });
             });
 
-        fetch(`http://54.251.190.7:1995/reportchangeroute`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const changeRoutes = data;
-                    this.setState({ changeRoutes });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `reportchangeroute`)
+            .then(res => {
+                const changeRoutes = res.data;
+                this.setState({ changeRoutes });
             });
 
-        fetch(`http://54.251.190.7:1995/reportchangedevice`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const changeDevices = data;
-                    this.setState({ changeDevices });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `reportchangedevice`)
+            .then(res => {
+                const changeDevices = res.data;
+                this.setState({ changeDevices });
             });
-
     }
 
     render() {

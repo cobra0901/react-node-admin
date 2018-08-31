@@ -4,6 +4,8 @@ import './index.css'
 import '../../css/main.css'
 import {FormResults} from "./tabs/FormResults";
 import {ContentTab} from "./ContentTab";
+import {SERVER_URL} from '../../Constant/config'
+import axios from 'axios';
 
 export class InputBox extends React.Component {
 
@@ -13,6 +15,7 @@ export class InputBox extends React.Component {
             error: null,
             isLoaded: false,
             results: [],
+            isDisabled:true,
             cards:[],
             ridehistories:[],
             topuphistories:[],
@@ -35,93 +38,41 @@ export class InputBox extends React.Component {
             return;
         }
 
-        fetch(`http://54.251.190.7:1995/users/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const results = data;
-                    this.setState({ results });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `users/${val}`)
+            .then(res => {
+                const results = res.data;
+                this.setState({ results });
             });
 
-        fetch(`http://54.251.190.7:1995/card/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const cards = data;
-                    this.setState({ cards });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `card/${val}`)
+            .then(res => {
+                const cards = res.data;
+                this.setState({ cards });
             });
 
-        fetch(`http://54.251.190.7:1995/ridehistory/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const ridehistories = data;
-                    this.setState({ ridehistories });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `rideHistory/${val}`)
+            .then(res => {
+                const ridehistories = res.data;
+                this.setState({ ridehistories });
             });
 
-        fetch(`http://54.251.190.7:1995/topuphistory/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const topuphistories = data;
-                    this.setState({ topuphistories });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `topuphistory/CardID/${val}`)
+            .then(res => {
+                const topuphistories = res.data;
+                this.setState({ topuphistories });
             });
 
-        fetch(`http://54.251.190.7:1995/reportblock/${val}`)
-            .then(response => {
-                if (response.status !== 200) {
-                    console.log('Error: ' + response.status);
-                    return;
-                }
-
-                response.json().then(data => {
-                    const reportblocks = data;
-                    this.setState({ reportblocks });
-                });
-            })
-
-            .catch(err => {
-                console.log('Fetch Error :-S', err);
+        axios.get(SERVER_URL + `reportblock/${val}`)
+            .then(res => {
+                const reportblocks = res.data;
+                this.setState({ reportblocks });
             });
+
     }
 
     render() {
+
+            console.log('NewState',this.state.isDisabled);
 
             return (
                 <div className="input-view">
@@ -134,7 +85,7 @@ export class InputBox extends React.Component {
                             <Button onClick={this.handleClick.bind(this)}>Insert</Button>
                         </Col>
 
-                        <FormResults results={this.state.results}/>
+                        <FormResults isDisabled={this.state.isDisabled} results={this.state.results}/>
 
                         <ContentTab
                             cards={this.state.cards}

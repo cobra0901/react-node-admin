@@ -25,6 +25,7 @@ export class BusContent extends React.Component {
                             <Tab.Pane eventKey="bus_stops">
                                 <Stops stops={this.props.stops} />
                             </Tab.Pane>
+
                             <Tab.Pane eventKey="bus_route_fare">
                                 <Routes routes={this.props.routes} />
                             </Tab.Pane>

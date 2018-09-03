@@ -6,6 +6,7 @@ import {Passenger} from './Components/Passenger';
 import './css/index.css';
 import {Library} from "./Components/Library/index";
 import {Driver} from "./Components/Driver/index";
+import {Sample} from "./Components/Sample";
 
 class App extends React.Component {
   render() {
@@ -17,7 +18,7 @@ class App extends React.Component {
             <Route path={'/passenger/'} component={Passenger} />
             <Route path={'/driver/'} component={Driver} />
             <Route path={'/library/'} component={Library} />
-            <Route path={'/'} component={Home} />
+            <Route path={'/'} component={Sample} />
 
         </Switch>
       </BrowserRouter>

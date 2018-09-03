@@ -69,6 +69,7 @@ export class Mycards extends React.Component {
 
                 </tbody>
             </Table>
+                
                 <Modal
                     show={this.state.show}
                     onHide={this.handleHide}
@@ -80,6 +81,7 @@ export class Mycards extends React.Component {
                             Update Data
                         </Modal.Title>
                     </Modal.Header>
+
                     <Modal.Body>
                         <label>UserID</label>
                         <input type="text" name="UserID"
@@ -104,10 +106,12 @@ export class Mycards extends React.Component {
                                value={this.state.CardNumber} onChange={this.handleChange.bind(this)} /><br/>
 
                     </Modal.Body>
+
                     <Modal.Footer>
                         <Button bsStyle="primary">Save</Button>
                         <Button onClick={this.handleHide}>Close</Button>
                     </Modal.Footer>
+
                 </Modal>
             </div>
         );

@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dabbe9bd-1c26-483f-a405-f140646522d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/tabs/Stops.js" afterPath="$PROJECT_DIR$/src/Components/Library/tabs/Stops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/ContentTab.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/ContentTab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/InputBox.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/InputBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/Mycards.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/Mycards.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/Report.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/Report.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,8 +79,8 @@
       <file leaf-file-name="Stops.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="236" column="31" lean-forward="false" selection-start-line="236" selection-start-column="31" selection-end-line="236" selection-end-column="31" />
+            <state relative-caret-position="439">
+              <caret line="174" column="28" lean-forward="true" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -311,12 +306,12 @@
       <workItem from="1535804640681" duration="462000" />
       <workItem from="1535938449356" duration="7209000" />
       <workItem from="1535985435064" duration="13541000" />
-      <workItem from="1536062492666" duration="15157000" />
+      <workItem from="1536062492666" duration="17644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133756000" />
+    <option name="totallyTimeSpent" value="136243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -701,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="236" column="31" lean-forward="false" selection-start-line="236" selection-start-column="31" selection-end-line="236" selection-end-column="31" />
+        <state relative-caret-position="439">
+          <caret line="174" column="28" lean-forward="true" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

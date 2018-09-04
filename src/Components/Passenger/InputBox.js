@@ -85,6 +85,8 @@ export class InputBox extends React.Component {
                             <Button onClick={this.handleClick.bind(this)}>Insert</Button>
                         </Col>
 
+                        <br/>
+
                         <FormResults isDisabled={this.state.isDisabled} results={this.state.results}/>
 
                         <ContentTab

@@ -22,11 +22,6 @@ export class ContentTab extends React.Component {
 
     }
 
-    onhandleClickDisabled(){
-        this.state = {
-            isDisabled: true
-        };
-    }
 
     render(){
 
@@ -35,11 +30,10 @@ export class ContentTab extends React.Component {
                 <Row className="clearfix">
                     <Col sm={12}>
                         <Nav bsStyle="tabs">
-                            <NavItem eventKey="my_cards" onClick={this.onhandleClickDisabled.bind(this)}>MY CARDS</NavItem>
-                            <NavItem eventKey="update_info" onClick={this.onhandleClickEnabled.bind(this)}>UPDATE INFO</NavItem>
-                            <NavItem eventKey="ride_details" onClick={this.onhandleClickDisabled.bind(this)}>RIDE DETAILS</NavItem>
-                            <NavItem eventKey="top_up_details" onClick={this.onhandleClickDisabled.bind(this)}>TOP UP DETAILS</NavItem>
-                            <NavItem eventKey="report" onClick={this.onhandleClickDisabled.bind(this)}>REPORT</NavItem>
+                            <NavItem eventKey="my_cards" >MY CARDS</NavItem>
+                            <NavItem eventKey="ride_details" >RIDE DETAILS</NavItem>
+                            <NavItem eventKey="top_up_details" >TOP UP DETAILS</NavItem>
+                            <NavItem eventKey="report" >REPORT</NavItem>
                         </Nav>
                     </Col>
 
@@ -49,10 +43,6 @@ export class ContentTab extends React.Component {
 
                             <Tab.Pane eventKey="my_cards">
                                 <Mycards cards={this.props.cards} />
-                            </Tab.Pane>
-
-                            <Tab.Pane eventKey="update_info" >
-                                Please update info
                             </Tab.Pane>
 
                             <Tab.Pane eventKey="ride_details">

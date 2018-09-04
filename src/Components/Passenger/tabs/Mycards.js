@@ -69,7 +69,7 @@ export class Mycards extends React.Component {
 
                 </tbody>
             </Table>
-                
+
                 <Modal
                     show={this.state.show}
                     onHide={this.handleHide}

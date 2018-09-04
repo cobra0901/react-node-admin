@@ -171,7 +171,7 @@ export class Stops extends React.Component {
 
         axios({
             method: 'put',
-            url: `http://localhost:5000/busstops/${this.state.Stops}`,
+            url: `http://localhost:5000/busstops`,
             data: InserData,
             config: { headers: {'Content-Type': 'multipart/form-data' }}
         })
@@ -179,7 +179,7 @@ export class Stops extends React.Component {
                 if (response.status === 200) {
                     console.log(response);
                     console.log(response.data);
-                    //window.location.reload()
+                    window.location.reload()
                 }
             })
             .catch(function (response) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Table,Button,Modal} from 'react-bootstrap';
 import '../../../css/index.css';
+import axios from 'axios';
 
 export class Mycards extends React.Component {
 
@@ -24,6 +25,45 @@ export class Mycards extends React.Component {
         this.setState(nextState);
     }
 
+    onHandleChangeCardUpdate=()=>{
+
+        const card =  {
+            "UserID": this.state.UserID,
+            "FirstName": this.state.FirstName,
+            "LastName": this.state.LastName,
+            "Isblock": this.state.Isblock,
+            "ValidFrom": this.state.ValidFrom,
+            "ValidTo": this.state.ValidTo,
+            "Balance": this.state.Balance,
+            "CardNumber": this.state.CardNumber,
+            "FareType": this.state.FareType
+        };
+
+        axios({
+            method: 'put',
+            url: `http://localhost:5000/card/${this.state.CardNumber}`,
+            data: card,
+            config: { headers: {'Content-Type': 'multipart/form-data' }}
+        })
+            .then(function (response) {
+                if (response.status === 200) {
+                    console.log("❤❤❤❤❤❤❤❤❤❤❤card❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤");
+                    console.log("Update Success");
+                    console.log(response);
+
+                }
+            })
+
+            .catch(function (response) {
+                console.log(response);
+
+            });
+
+            this.setState({ show: false });
+            window.location.reload()
+
+    };
+
     render() {
         return(
             <div>
@@ -37,7 +77,6 @@ export class Mycards extends React.Component {
                     <th>ValidTo</th>
                     <th>Balance</th>
                     <th>Card Number</th>
-                    <th className="th-button-view"></th>
                     <th className="th-button-view"></th>
                 </tr>
                 </thead>
@@ -63,7 +102,6 @@ export class Mycards extends React.Component {
                                     Balance:this.props.cards[index].Balance,
                                     CardNumber:this.props.cards[index].CardNumber,
                                 })}>edit</Button></td>
-                                <td><Button bsStyle="danger">delete</Button></td>
                             </tr>
                         )})}
 
@@ -108,7 +146,7 @@ export class Mycards extends React.Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <Button bsStyle="primary">Save</Button>
+                        <Button bsStyle="primary" onClick={this.onHandleChangeCardUpdate.bind(this)}>Save</Button>
                         <Button onClick={this.handleHide}>Close</Button>
                     </Modal.Footer>
 

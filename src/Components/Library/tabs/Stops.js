@@ -1,6 +1,8 @@
 import React from 'react';
 import {Table,Button,Modal} from 'react-bootstrap';
 import '../../../css/index.css';
+import axios from 'axios';
+import API from '../../../Constant/api'
 
 export class Stops extends React.Component {
 
@@ -11,6 +13,8 @@ export class Stops extends React.Component {
 
         this.state = {
             show: false,
+            del_show: false,
+            update_show: false,
             Stops:'',
             Lat:'',
             Longtitude:'',
@@ -43,10 +47,78 @@ export class Stops extends React.Component {
         this.setState({ show: false });
     }
 
+    handleHideDel() {
+        this.setState({ del_show: false });
+    }
+
+    handleHideUpdate() {
+        this.setState({ update_show: false });
+    }
+
     handleChange(e){
         var nextState = {};
         nextState[e.target.name] = e.target.value;
         this.setState(nextState);
+    }
+
+    onChangeStop(){
+        const InserData =  {
+                "BusRoute": this.state.BusRoute,
+                "Stops": this.state.Stops,
+                "Lat": this.state.Lat,
+                "Longtitude": this.state.Longtitude,
+                "GPS_Location_1": this.state.GPS_Location_1,
+                "GPS_Location_2": this.state.GPS_Location_2,
+                "Poly_Cord_lat1": this.state.Poly_Cord_lat1,
+                "Poly_Cord_long1": this.state.Poly_Cord_long1,
+                "Poly_Cord_lat2": this.state.Poly_Cord_lat2,
+                "Poly_Cord_long2": this.state.Poly_Cord_long2,
+                "Poly_Cord_lat3": this.state.Poly_Cord_lat3,
+                "Poly_Cord_long3": this.state.Poly_Cord_long3,
+                "Poly_Cord_lat4": this.state.Poly_Cord_lat4,
+                "Poly_Cord_long4": this.state.Poly_Cord_long4,
+                "Poly_Cord_lat5": this.state.Poly_Cord_lat5,
+                "Poly_Cord_long5": this.state.Poly_Cord_long5,
+                "Poly_Cord_lat6": this.state.Poly_Cord_lat6,
+                "Poly_Cord_long6": this.state.Poly_Cord_long6,
+                "Poly_Cord_lat7": this.state.Poly_Cord_lat7,
+                "Poly_Cord_long7": this.state.Poly_Cord_long7,
+                "Poly_Cord_lat8": this.state.Poly_Cord_lat8,
+                "Poly_Cord_long8": this.state.Poly_Cord_long8,
+                "Poly_Cord_lat9": this.state.Poly_Cord_lat9,
+                "Poly_Cord_long9": this.state.Poly_Cord_long9,
+                "Poly_Cord_lat10": this.state.Poly_Cord_lat10,
+                "Poly_Cord_long10": this.state.Poly_Cord_long10
+            };
+
+        console.log("REERE",this.state.Poly_Cord_long10);
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:5000/busstops',
+            data: InserData,
+            config: { headers: {'Content-Type': 'multipart/form-data' }}
+        })
+            .then(function (response) {
+                if (response.status === 200) {
+                    console.log(response.data);
+                   // window.location.reload()
+                }
+            })
+            .catch(function (response) {
+                console.log(response);
+            });
+    }
+
+    onDeleteStops(){
+        console.log("Stops",this.state.Stops);
+
+        API.delete(`busstops/${this.state.Stops}`)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                //window.location.reload();
+            })
     }
 
     render() {
@@ -116,6 +188,7 @@ export class Stops extends React.Component {
                                 <td>{this.props.stops[index].Poly_Cord_long10}</td>
                                 <td><Button bsStyle="success" onClick={() => this.setState({
                                     show: true,
+                                    BusRoute:this.props.stops[index].BusRoute,
                                     Stops:this.props.stops[index].Stops,
                                     Lat:this.props.stops[index].Lat,
                                     Longtitude:this.props.stops[index].Longtitude,
@@ -142,42 +215,16 @@ export class Stops extends React.Component {
                                     Poly_Cord_long9:this.props.stops[index].Poly_Cord_long9,
                                     Poly_Cord_long10:this.props.stops[index].Poly_Cord_long10,
                                 })}>edit</Button></td>
-                                <td><Button bsStyle="danger">delete</Button></td>
+                                <td><Button bsStyle="danger" onClick={()=>{this.setState({
+                                    Stops:this.props.stops[index].Stops,
+                                    del_show:true})}}>delete</Button></td>
                             </tr>
                         )})}
 
                     </tbody>
                 </Table>
 
-                <Button bsStyle="info" style={{marginLeft:30}} onClick={() => this.setState({
-                    show: true,
-                    Stops:'',
-                    Lat:'',
-                    Longtitude:'',
-                    GPS_Location_1:'',
-                    GPS_Location_2:'',
-                    Poly_Cord_lat1:'',
-                    Poly_Cord_lat2:'',
-                    Poly_Cord_lat3:'',
-                    Poly_Cord_lat4:'',
-                    Poly_Cord_lat5:'',
-                    Poly_Cord_lat6:'',
-                    Poly_Cord_lat7:'',
-                    Poly_Cord_lat8:'',
-                    Poly_Cord_lat9:'',
-                    Poly_Cord_lat10:'',
-                    Poly_Cord_long1:'',
-                    Poly_Cord_long2:'',
-                    Poly_Cord_long3:'',
-                    Poly_Cord_long4:'',
-                    Poly_Cord_long5:'',
-                    Poly_Cord_long6:'',
-                    Poly_Cord_long7:'',
-                    Poly_Cord_long8:'',
-                    Poly_Cord_long9:'',
-                    Poly_Cord_long10:''})}>New</Button>
-
-                <Button bsStyle="info" style={{marginLeft:30}} >export</Button>
+                <Button bsStyle="info" onClick={()=>{this.setState({show:true})}} style={{marginLeft:30}}>New</Button>
 
                 <Modal
                     show={this.state.show}
@@ -187,7 +234,7 @@ export class Stops extends React.Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title">
-                            Update Bus Route Fare
+                            New Bus Route Fare
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -256,8 +303,28 @@ export class Stops extends React.Component {
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button bsStyle="primary">Save</Button>
-                        <Button onClick={this.handleHide}>Close</Button>
+                        <Button bsStyle="primary" onClick={this.onChangeStop.bind(this)}>Save</Button>
+                        <Button onClick={this.handleHideUpdate.bind(this)}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
+
+                <Modal
+                    show={this.state.del_show}
+                    onHide={this.handleHide}
+                    container={this}
+                    aria-labelledby="contained-modal-title"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title">
+                            Delete Bus Route Fare
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Are you really remove this data?
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button bsStyle="primary" onClick={this.onDeleteStops.bind(this)}>Save</Button>
+                        <Button onClick={this.handleHideDel.bind(this)}>Close</Button>
                     </Modal.Footer>
                 </Modal>
             </div>

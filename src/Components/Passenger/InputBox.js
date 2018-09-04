@@ -87,7 +87,7 @@ export class InputBox extends React.Component {
 
                         <br/>
 
-                        <FormResults isDisabled={this.state.isDisabled} results={this.state.results}/>
+                        <FormResults isDisabled={this.state.isDisabled} cards={this.state.cards} results={this.state.results}/>
 
                         <ContentTab
                             cards={this.state.cards}

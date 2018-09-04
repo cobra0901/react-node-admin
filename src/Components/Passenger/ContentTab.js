@@ -15,14 +15,6 @@ export class ContentTab extends React.Component {
         };
     }
 
-    onhandleClickEnabled(){
-        this.state = {
-            isDisabled:false
-    };
-
-    }
-
-
     render(){
 
         return(

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Row,Tab,Nav,NavItem,Col} from 'react-bootstrap';
-
 import '../../css/main.css'
 import {MyAccount} from "./tabs/MyAccount";
 import {Transaction} from "./tabs/Transaction";
@@ -19,7 +18,6 @@ export class ContentTab extends React.Component {
                     <Col sm={12}>
                         <Nav bsStyle="tabs">
                             <NavItem eventKey="my_account">MY ACCOUNT</NavItem>
-                            <NavItem eventKey="update_info">UPDATE INFO</NavItem>
                             <NavItem eventKey="ride_details">RIDE DETAILS</NavItem>
                             <NavItem eventKey="top_up_details">TOP UP DETAILS</NavItem>
                             <NavItem eventKey="transaction">TRANSACTION</NavItem>
@@ -34,9 +32,6 @@ export class ContentTab extends React.Component {
                         <Tab.Content animation>
                             <Tab.Pane eventKey="my_account">
                                 <MyAccount cards={this.props.cards} />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="update_info">
-                                Please update info
                             </Tab.Pane>
                             <Tab.Pane eventKey="ride_details">
                                 <RideDetails rideDetails={this.props.rideDetails}/>

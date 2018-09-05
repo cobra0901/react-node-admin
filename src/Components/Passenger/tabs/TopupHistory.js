@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../css/index.css'
-import {Table,Button,Modal} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 
 export class TopupHistory extends React.Component {
 

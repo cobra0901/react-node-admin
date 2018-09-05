@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dabbe9bd-1c26-483f-a405-f140646522d6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/ContentTab.js" afterPath="$PROJECT_DIR$/src/Components/Driver/ContentTab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/DriverBox.js" afterPath="$PROJECT_DIR$/src/Components/Driver/DriverBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/Service.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/Service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js" afterPath="$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/BusBox.js" afterPath="$PROJECT_DIR$/src/Components/Library/BusBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/BusContent.js" afterPath="$PROJECT_DIR$/src/Components/Library/BusContent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/index.css" afterPath="$PROJECT_DIR$/src/Components/Library/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/index.js" afterPath="$PROJECT_DIR$/src/Components/Library/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/tabs/Routes.js" afterPath="$PROJECT_DIR$/src/Components/Library/tabs/Routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Library/tabs/Stops.js" afterPath="$PROJECT_DIR$/src/Components/Library/tabs/Stops.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js" afterPath="$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,71 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InputBox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/InputBox.js">
+      <file leaf-file-name="FormResults.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <marker date="1536071232058" expanded="true" signature="2084:3043" ph="..." />
-                <marker date="1536071232058" expanded="true" signature="2111:3020" ph="..." />
-                <marker date="1536071232058" expanded="true" signature="2668:3014" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContentTab.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/ContentTab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormResults.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-334">
-              <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Report.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/Report.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="125" column="14" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="125" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#12302#15708#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BusContent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Library/BusContent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stops.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="181" column="20" lean-forward="false" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="20" />
+            <state relative-caret-position="188">
+              <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -89,11 +48,36 @@
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Driver/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="232">
+              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverBox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Driver/DriverBox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormResults.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#handleUpdateSave#0;n#FormResults#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,7 +90,6 @@
       <find>FirstName</find>
       <find>console</find>
       <find>context</find>
-      <find>isDisabled</find>
       <find>onhandleClickDisabled</find>
       <find>results</find>
       <find>onhandleChange</find>
@@ -114,6 +97,15 @@
       <find>CardNumber</find>
       <find>onHandleChangeCardUpdate</find>
       <find>Balance</find>
+      <find>onInsertStop</find>
+      <find>Report_Date</find>
+      <find>Old_ControllerID</find>
+      <find>New_UserID</find>
+      <find>BusID</find>
+      <find>Profession</find>
+      <find>isDisabled</find>
+      <find>handleChange</find>
+      <find>cards</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,18 +121,8 @@
         <option value="$PROJECT_DIR$/src/Components/Library/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Driver/Drivers.js" />
         <option value="$PROJECT_DIR$/src/Components/Driver/index.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js" />
         <option value="$PROJECT_DIR$/src/Components/Driver/tabs/History.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/Service.js" />
         <option value="$PROJECT_DIR$/src/Components/Library/index.css" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/DriverBox.js" />
-        <option value="$PROJECT_DIR$/src/Components/Driver/ContentTab.js" />
         <option value="$PROJECT_DIR$/src/Components/Library/BusBox.js" />
         <option value="$PROJECT_DIR$/src/Components/Library/BusContent.js" />
         <option value="$PROJECT_DIR$/src/Components/Library/tabs/Routes.js" />
@@ -151,16 +133,26 @@
         <option value="$PROJECT_DIR$/src/Components/Sample/info.js" />
         <option value="$PROJECT_DIR$/src/Components/Sample/index.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js" />
-        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js" />
         <option value="$PROJECT_DIR$/src/Constant/config.js" />
         <option value="$PROJECT_DIR$/src/Constant/api.js" />
         <option value="$PROJECT_DIR$/src/Components/Passenger/InputBox.js" />
         <option value="$PROJECT_DIR$/src/Components/Passenger/ContentTab.js" />
-        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" />
         <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/Report.js" />
         <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/Mycards.js" />
         <option value="$PROJECT_DIR$/src/Components/Library/tabs/Stops.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/Service.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js" />
+        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js" />
+        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/ContentTab.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/DriverBox.js" />
+        <option value="$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js" />
+        <option value="$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js" />
       </list>
     </option>
   </component>
@@ -176,10 +168,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-196" />
+    <option name="y" value="475" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="520" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -199,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,14 +215,29 @@
               <item name="react-node-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Library" type="462c0819:PsiDirectoryNode" />
+              <item name="Driver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-node-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-node-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Library" type="462c0819:PsiDirectoryNode" />
+              <item name="Driver" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-node-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-node-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Passenger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-node-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-node-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Passenger" type="462c0819:PsiDirectoryNode" />
               <item name="tabs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,7 +250,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -306,12 +313,13 @@
       <workItem from="1535804640681" duration="462000" />
       <workItem from="1535938449356" duration="7209000" />
       <workItem from="1535985435064" duration="13541000" />
-      <workItem from="1536062492666" duration="18103000" />
+      <workItem from="1536062492666" duration="18218000" />
+      <workItem from="1536147525936" duration="16716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136702000" />
+    <option name="totallyTimeSpent" value="153533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -425,55 +433,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops" />
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/History.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-348">
-          <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1607">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1027">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/Service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1027">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Home/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -492,41 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1227">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="108" column="110" lean-forward="false" selection-start-line="108" selection-start-column="110" selection-end-line="108" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/ContentTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Driver/DriverBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-959">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -558,16 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3799">
-          <caret line="135" column="73" lean-forward="false" selection-start-line="135" selection-start-column="73" selection-end-line="135" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Sample/remove.js" />
     <entry file="file://$PROJECT_DIR$/src/Components/Sample/update.js" />
     <entry file="file://$PROJECT_DIR$/src/Components/Sample/Creator.js" />
@@ -584,48 +498,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Constant/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/InputBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1536071232058" expanded="true" signature="2084:3043" ph="..." />
-            <marker date="1536071232058" expanded="true" signature="2111:3020" ph="..." />
-            <marker date="1536071232058" expanded="true" signature="2668:3014" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,9 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="205" column="5" lean-forward="true" selection-start-line="172" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#onhandleUpdateReport#0;n#App#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,22 +520,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/Mycards.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="265">
+          <caret line="177" column="39" lean-forward="true" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-334">
-          <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,29 +538,217 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Library/BusContent.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/InputBox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <caret line="87" column="29" lean-forward="false" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1536071232058" expanded="true" signature="2084:3043" ph="..." />
+            <marker date="1536071232058" expanded="true" signature="2111:3020" ph="..." />
+            <marker date="1536071232058" expanded="true" signature="2668:3014" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="n#!!block;n#onInsertStop#0;n#Routes#0" expanded="false" />
+            <element signature="e#5531#7260#0" expanded="false" />
+            <element signature="e#7278#9063#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/Transaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/TopupHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/Report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="125" column="14" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="125" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
             <element signature="e#12302#15708#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Library/tabs/Stops.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/Mycards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="181" column="20" lean-forward="false" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="20" />
+        <state relative-caret-position="725">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Library/BusContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/ChangeDevice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="n#!!block;n#onInsertStop#0;n#ChangeDevice#0" expanded="false" />
+            <element signature="n#!!block;n#onUpdateStop#0;n#ChangeDevice#0" expanded="false" />
+            <element signature="n#!!block;n#onDeleteStops#0;n#ChangeDevice#0" expanded="false" />
+            <element signature="e#8759#12632#0" expanded="false" />
+            <element signature="e#12650#16383#0" expanded="false" />
+            <element signature="e#16401#17250#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/ChangeRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4147">
+          <caret line="143" column="81" lean-forward="false" selection-start-line="143" selection-start-column="76" selection-end-line="143" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/History.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/RideDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1175">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/ContentTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/MyAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/RideDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/Service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="e#370#1004#0" expanded="false" />
+            <element signature="n#!!block;n#onInsertStop#0;n#Service#0" expanded="false" />
+            <element signature="n#!!block;n#onUpdateStop#0;n#Service#0" expanded="false" />
+            <element signature="n#!!block;n#onDeleteStops#0;n#Service#0" expanded="false" />
+            <element signature="e#6911#9451#0" expanded="false" />
+            <element signature="e#9469#11921#0" expanded="false" />
+            <element signature="e#11939#12788#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/TopupHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/DriverBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Passenger/tabs/FormResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#handleUpdateSave#0;n#FormResults#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Driver/tabs/FormResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

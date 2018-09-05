@@ -4,7 +4,7 @@ export class MyAccount extends React.Component {
     render() {
         return(
             <div>
-3
+                This is My Account...
             </div>
         );
     }

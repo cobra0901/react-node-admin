@@ -1,6 +1,5 @@
 import React from 'react';
 import {Table,Button,Modal} from 'react-bootstrap';
-import '../../../css/index.css';
 import axios from 'axios';
 import API from '../../../Constant/api'
 
@@ -194,7 +193,7 @@ export class Stops extends React.Component {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-                //window.location.reload();
+                window.location.reload();
             })
     }
 
@@ -263,7 +262,7 @@ export class Stops extends React.Component {
                                 <td>{this.props.stops[index].Poly_Cord_long9}</td>
                                 <td>{this.props.stops[index].Poly_Cord_lat10}</td>
                                 <td>{this.props.stops[index].Poly_Cord_long10}</td>
-                                <td><Button bsStyle="success" onClick={() => this.setState({
+                                <td><Button bsStyle="success" style={{width:50}} onClick={() => this.setState({
                                     update_show: true,
                                     BusRoute:this.props.stops[index].BusRoute,
                                     Stops:this.props.stops[index].Stops,
@@ -292,7 +291,7 @@ export class Stops extends React.Component {
                                     Poly_Cord_long9:this.props.stops[index].Poly_Cord_long9,
                                     Poly_Cord_long10:this.props.stops[index].Poly_Cord_long10,
                                 })}>edit</Button></td>
-                                <td><Button bsStyle="danger" onClick={()=>{this.setState({
+                                <td><Button bsStyle="danger" style={{width:60}} onClick={()=>{this.setState({
                                     Stops:this.props.stops[index].Stops,
                                     del_show:true})}}>delete</Button></td>
                             </tr>

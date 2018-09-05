@@ -20,6 +20,7 @@ export class DriverBox extends React.Component {
             histories:[],
             transactions:[],
             services:[],
+            buses:[],
             changeRoutes:[],
             changeDevices:[],
             busid:''
@@ -46,10 +47,22 @@ export class DriverBox extends React.Component {
                 this.setState({ results });
             });
 
+        axios.get(SERVER_URL + `bus/${val}`)
+            .then(res => {
+                const buses = res.data;
+                this.setState({ buses });
+            });
+
         axios.get(SERVER_URL + `ridehistoryD/${val}`)
             .then(res => {
                 const rideDetails = res.data;
                 this.setState({ rideDetails });
+            });
+
+        axios.get(SERVER_URL + `transactionWeekly/byBus/${val}`)
+            .then(res => {
+                const transactions = res.data;
+                this.setState({ transactions });
             });
 
         axios.get(SERVER_URL + `topuphistory/BusID/${val}`)
@@ -90,7 +103,7 @@ export class DriverBox extends React.Component {
                         <Button onClick={this.handleClick.bind(this)}>Insert</Button>
                     </Col>
 
-                    <FormResults results={this.state.results}/>
+                    <FormResults results={this.state.results} buses={this.state.buses} transactions={this.state.transactions}/>
 
                     <ContentTab
                         rideDetails={this.state.rideDetails}

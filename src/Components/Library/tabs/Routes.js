@@ -2,7 +2,8 @@ import React from 'react';
 import {Table, Button, Modal} from 'react-bootstrap';
 import '../../../css/index.css';
 import axios from 'axios';
-import {SERVER_URL} from "../../../Constant/config";
+import API from "../../../Constant/api";
+
 export class Routes extends React.Component {
 
     constructor(props) {
@@ -11,23 +12,106 @@ export class Routes extends React.Component {
         this.handleHide = this.handleHide.bind(this);
 
         this.state = {
-            showNew: false,
-            showUpdate: false,
+            new_show: false,
+            update_show: false,
+            del_show: false,
             name: "",
-            bus_route: "",
-            bus_id: "",
-            zone: "",
+            BusRoute: "",
+            From_route: "",
+            To_route: "",
+            Fare: "",
+            FareType: "",
+            new_BusRoute: "",
+            new_From_route: "",
+            new_To_route: "",
+            new_Fare: "",
+            new_FareType: "",
         };
     }
 
     handleHide() {
-        this.setState({showNew: false,showUpdate:false});
+        this.setState({del_show: false,update_show:false,new_show:false});
     }
 
     handleChange(e){
         var nextState = {};
         nextState[e.target.name] = e.target.value;
         this.setState(nextState);
+    }
+
+    onInsertStop(){
+
+        const InserData =  {
+
+            "BusRoute": this.state.new_BusRoute,
+            "From_route": this.state.new_From_route,
+            "To_route": this.state.new_To_route,
+            "Fare": this.state.new_Fare,
+            "FareType": this.state.new_FareType,
+        };
+
+        console.log("REERE",this.state.new_BusRoute);
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:5000/routefare',
+            data: InserData,
+            config: { headers: {'Content-Type': 'multipart/form-data' }}
+        })
+            .then(function (response) {
+                if (response.status === 200) {
+                    console.log(response);
+
+                    window.location.reload();
+                    //this.setState({new_show:false})
+                }
+            })
+            .catch(function (response) {
+                console.log(response);
+            });
+    }
+
+    onUpdateStop(){
+
+        const InserData =  {
+            "BusRoute": this.state.BusRoute,
+            "From_route": this.state.From_route,
+            "To_route": this.state.To_route,
+            "Fare": this.state.Fare,
+            "FareType": this.state.FareType,
+            "id":this.state.id
+        };
+
+        console.log("FareType",this.state.FareType);
+        console.log("id",this.state.id);
+
+        axios({
+            method: 'put',
+            url: `http://localhost:5000/routefare/${this.state.id}`,
+            data: InserData,
+            config: { headers: {'Content-Type': 'multipart/form-data' }}
+        })
+            .then(function (response) {
+                if (response.status === 200) {
+                    // console.log(response);
+                    // console.log(response.data);
+                    window.location.reload()
+                }
+            })
+            .catch(function (response) {
+                console.log(response);
+            });
+    }
+
+    onDeleteStops(){
+        console.log("id",this.state.id);
+
+        API.delete(`routefare/${this.state.id}`)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                window.location.reload();
+            });
     }
 
 
@@ -38,10 +122,11 @@ export class Routes extends React.Component {
                 <Table responsive className="table-view" bordered hover>
                     <thead>
                     <tr className="th-view">
-                        <th>id</th>
                         <th>BusRoute</th>
-                        <th>Bus_ID</th>
-                        <th>Zone</th>
+                        <th>From_route</th>
+                        <th>To_route</th>
+                        <th>Fare</th>
+                        <th>FareType</th>
                         <th className="th-button-view"></th>
                         <th className="th-button-view"></th>
                     </tr>
@@ -51,24 +136,23 @@ export class Routes extends React.Component {
                     {this.props.routes.map((element, index) => {
                         return (
                             <tr key={index}>
-                                <td>{this.props.routes[index].id}</td>
                                 <td>{this.props.routes[index].BusRoute}</td>
-                                <td>{this.props.routes[index].Bus_ID}</td>
-                                <td>{this.props.routes[index].Zone}</td>
+                                <td>{this.props.routes[index].From_route}</td>
+                                <td>{this.props.routes[index].To_route}</td>
+                                <td>{this.props.routes[index].Fare}</td>
+                                <td>{this.props.routes[index].FareType}</td>
                                 <td><Button bsStyle="success" onClick={() => this.setState({
-                                    showUpdate: true,
-                                    bus_route:this.props.routes[index].BusRoute,
-                                    bus_id:this.props.routes[index].Bus_ID,
-                                    zone:this.props.routes[index].Zone})}>edit</Button>
+                                    update_show: true,
+                                    id:this.props.routes[index].id,
+                                    BusRoute:this.props.routes[index].BusRoute,
+                                    From_route:this.props.routes[index].From_route,
+                                    To_route:this.props.routes[index].To_route,
+                                    Fare:this.props.routes[index].Fare,
+                                    FareType:this.props.routes[index].FareType})}>edit</Button>
                                 </td>
-                                <td><Button bsStyle="danger" onClick={()=>{
-                                    this.setState({bus_route:this.props.routes[index].BusRoute});
-                                    axios.delete(SERVER_URL +`busroute/${this.state.bus_route}`)
-                                        .then(res => {
-                                            console.log(res);
-                                            console.log(res.data);
-                                        })
-                                }}>delete</Button></td>
+                                <td><Button bsStyle="danger" onClick={()=>{this.setState({
+                                    id:this.props.routes[index].id,
+                                    del_show:true})}}>delete</Button></td>
                             </tr>
                         )
                     })}
@@ -76,17 +160,10 @@ export class Routes extends React.Component {
                     </tbody>
                 </Table>
 
-                <Button bsStyle="info" style={{marginLeft:30}} onClick={() => this.setState({
-                    showNew: true,
-                    bus_route:'',
-                    bus_id:'',
-                    zone:''
-                    })}>New</Button>
-
-                <Button bsStyle="info" style={{marginLeft:30}} >export</Button>
+                <Button bsStyle="info" style={{marginLeft:30}} onClick={()=>this.setState({new_show:true})}>New</Button>
 
                 <Modal
-                    show={this.state.showUpdate}
+                    show={this.state.update_show}
                     onHide={this.handleHide}
                     container={this}
                     aria-labelledby="contained-modal-title"
@@ -98,21 +175,25 @@ export class Routes extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         <label>Bus Route</label>
-                        <input type="text" name="bus_route"
-                               value={this.state.bus_route} onChange={this.handleChange.bind(this)} /><br/>
-                        <label>Bus ID</label>
-                        <input type="text" name="bus_id" value={this.state.bus_id} onChange={this.handleChange.bind(this)}/><br/>
-                        <label>Zone</label>
-                        <input type="text" name="zone" value={this.state.zone} onChange={this.handleChange.bind(this)}/><br/>
+                        <input type="text" name="BusRoute"
+                               value={this.state.BusRoute} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>From Route</label>
+                        <input type="text" name="From_route" value={this.state.From_route} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>To Route</label>
+                        <input type="text" name="To_route" value={this.state.To_route} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>Fare</label>
+                        <input type="text" name="Fare" value={this.state.Fare} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>FareType</label>
+                        <input type="text" name="FareType" value={this.state.FareType} onChange={this.handleChange.bind(this)}/><br/>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button bsStyle="primary">Save</Button>
+                        <Button bsStyle="primary" onClick={this.onUpdateStop.bind(this)}>Save</Button>
                         <Button onClick={this.handleHide}>Close</Button>
                     </Modal.Footer>
                 </Modal>
 
                 <Modal
-                    show={this.state.showNew}
+                    show={this.state.new_show}
                     onHide={this.handleHide}
                     container={this}
                     aria-labelledby="contained-modal-title"
@@ -124,28 +205,41 @@ export class Routes extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         <label>Bus Route</label>
-                        <input type="text" name="bus_route"
-                               value={this.state.bus_route} onChange={this.handleChange.bind(this)} /><br/>
-                        <label>Bus ID</label>
-                        <input type="text" name="bus_id" value={this.state.bus_id} onChange={this.handleChange.bind(this)}/><br/>
-                        <label>Zone</label>
-                        <input type="text" name="zone" value={this.state.zone} onChange={this.handleChange.bind(this)}/><br/>
+                        <input type="text" name="new_BusRoute"
+                               value={this.state.new_BusRoute} onChange={this.handleChange.bind(this)} /><br/>
+                        <label>From Route</label>
+                        <input type="text" name="new_From_route" value={this.state.new_From_route} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>To Route</label>
+                        <input type="text" name="new_To_route" value={this.state.new_To_route} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>Fare</label>
+                        <input type="text" name="new_Fare" value={this.state.new_Fare} onChange={this.handleChange.bind(this)}/><br/>
+                        <label>FareType</label>
+                        <input type="text" name="new_FareType" value={this.state.new_FareType} onChange={this.handleChange.bind(this)}/><br/>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button bsStyle="primary" onClick={()=>{
-                            console.log("BusRoute",this.state.bus_route);
-                            const data = {
-                                BusRoute: this.state.bus_route,
-                                Bus_ID: this.state.bus_id,
-                                Zone: this.state.zone
-                            };
-                            axios.post(SERVER_URL +`busroute`, { data })
-                                .then(res => {
-                                    console.log(res);
-                                    console.log("success");
-                                    console.log(res.data);
-                                })
-                        }}>Save</Button>
+                        <Button bsStyle="primary" onClick={this.onInsertStop.bind(this)}>Save</Button>
+                        <Button onClick={()=>{this.setState({new_show:false})}}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
+
+                <Modal
+                    show={this.state.del_show}
+                    onHide={this.handleHide}
+                    container={this}
+                    aria-labelledby="contained-modal-title"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title">
+                            Delete Bus Route Fare
+                        </Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                        Are you really remove this data?
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button bsStyle="primary" onClick={this.onDeleteStops.bind(this)}>Save</Button>
                         <Button onClick={this.handleHide}>Close</Button>
                     </Modal.Footer>
                 </Modal>

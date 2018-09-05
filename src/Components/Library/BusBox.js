@@ -16,7 +16,7 @@ export class BusBox extends React.Component {
 
     componentDidMount(){
 
-        axios.get(SERVER_URL + `busroute/`)
+        axios.get(SERVER_URL + `routefare/`)
             .then(res => {
                 const routes = res.data;
                 this.setState({ routes });
